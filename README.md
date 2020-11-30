@@ -15,7 +15,7 @@
 * Create usability instructions on readme file. (Ok)
 
 ______
-# Como foi solucionado
+# Como validar a solução
 
 ### Requisitos
 É necessário dois binários para build do projeto
