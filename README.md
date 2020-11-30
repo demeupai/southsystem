@@ -12,7 +12,7 @@
 * The code should be idempotent. (Ok)
 * The image should be deployed through Jenkins pipeline. 
 * Submit the code to Github. (Ok)
-* Create usability instructions on readme file.
+* Create usability instructions on readme file. (Ok)
 
 ______
 # Como foi solucionado
