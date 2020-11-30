@@ -45,7 +45,7 @@ $ terraform apply
 ```
 
 ## Débitos técnicos
-- Pendente incluir o output do kubeconfig 
+- kubectl get nodes --kubeconfig aws/kube_config_workload.yaml
 
 #### Acessando o cluster via Web UI
 Ao final do processo será informado a URL de acesso ao rancher server, vamos acessa-lo com a senha que definimos anteriormente. 
