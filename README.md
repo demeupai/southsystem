@@ -67,6 +67,8 @@ Foi utilizado uma imagem padrão para utilização do liveness que escuta no res
 Foi configurado HPA, um deployment e um service para uma aplicação padrão para este conceito.
 
 ## Deploy aplicação utilizando jenkins
-Vamos configurar a interação do Jenkins com o Github, através dos menus abaixo
+Vamos configurar a interação do Jenkins com o Github, com base na documentação abaixo
+- https://rancher.com/docs/rancher/v2.x/en/admin-settings/authentication/github/
+
 
 
