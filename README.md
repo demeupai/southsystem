@@ -57,7 +57,6 @@ Vamos acessar a pasta raiz do projeto e acessar o diretório
 $ cd manifest_k8s/
 $ kubectl apply -f app-health.yml --kubeconfig ../terraform/aws/kube_config_workload.yaml
 $ kubectl apply -f app-hpa.yml --kubeconfig ../terraform/aws/kube_config_workload.yaml
-$ kubectl apply -f bd-redis.yml --kubeconfig ../terraform/aws/kube_config_workload.yaml
 ```
 
 ## Manifestos YML
@@ -66,6 +65,15 @@ Foi utilizado uma imagem padrão para utilização do liveness que escuta no res
 #### app-hpa
 Foi configurado HPA, um deployment e um service para uma aplicação padrão para este conceito.
 
+Antes vamos fazer deploy de um sistema de armazenamento para o cluster
+```sh
+$ kubectl create ns longhorn-system --kubeconfig ../terraform/aws/kube_config_workload.yaml 
+$ kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/master/deploy/longhorn.yaml
+```
+#### bd-redis
+```sh
+$ kubectl apply -f bd-redis.yml --kubeconfig ../terraform/aws/kube_config_workload.yaml
+```
 ## Deploy aplicação utilizando jenkins
 Vamos configurar a interação do Jenkins com o Github, com base na documentação abaixo
 - https://rancher.com/docs/rancher/v2.x/en/admin-settings/authentication/github/
