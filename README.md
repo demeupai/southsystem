@@ -79,4 +79,10 @@ Vamos configurar a interação do Jenkins com o Github, com base na documentaç�
 - https://rancher.com/docs/rancher/v2.x/en/admin-settings/authentication/github/
 
 
-
+Como administrador, a partir da visão global, vá em **security > Authentication**
+Selecione **GitHub** e abra esse link:
+    - https://github.com/settings/developers
+Selecione **Registers a new OAuth application** e preencha os campos **Homepage URL** e **Authorization callbacks URL** com os dados:
+informados no rancher.
+No finall será possível copiar o **client ID** e **gerar o Client Secret**, vamos copiar estes valores e informar no rancher.
+No final vamos salvar e habilitar o repositório **app-rancher**
