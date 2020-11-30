@@ -44,22 +44,20 @@ $ terraform plan
 $ terraform apply
 ```
 
-## Débitos técnicos
-- kubectl get nodes --kubeconfig aws/kube_config_workload.yaml
-
 #### Acessando o cluster via Web UI
 Ao final do processo será informado a URL de acesso ao rancher server, vamos acessa-lo com a senha que definimos anteriormente. 
 #### Acessando o cluster a partir do kubeconfig
 Vamos copiar o conteúdo do kubeconfig do cluster e adicionar no nosso config local, por padrão o conf está em 
 ```sh
-~/.kube/config
+kubectl get nodes --kubeconfig aws/kube_config_workload.yaml
 ```
 # Deploy dos manifestos 
 Vamos acessar a pasta raiz do projeto e acessar o diretório 
 ```sh
 $ cd manifest_k8s/
-$ chmod +x deploy.sh && \
-./deploy
+$ kubectl apply -f app-health.yml --kubeconfig ../terraform/aws/kube_config_workload.yaml
+$ kubectl apply -f app-hpa.yml --kubeconfig ../terraform/aws/kube_config_workload.yaml
+$ kubectl apply -f bd-redis.yml --kubeconfig ../terraform/aws/kube_config_workload.yaml
 ```
 
 ## Manifestos YML
